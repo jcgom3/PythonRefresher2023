@@ -43,7 +43,22 @@ print(parrot[:])    #when no start and or end values are provided, it will print
 
 
 #negative slicing
+print()
 print(parrot[-4:-2])   # Bl
 print(parrot[-4:12])   # Bl
 
 print(parrot[-14:-8])
+
+# addition - using steps
+print()
+print(parrot[0:6:2])    # nre from 0 up to but not including 6 every 2 steps
+print(parrot[0:6:3])    # nw from 0 up to but not including 6 every 3 steps
+
+number = "9,223;372:036 854,775;807"
+print()
+separators = number[1::4]
+print(separators)
+
+values = "".join(char if char not in separators else " " for char in number).split()
+
+print([int(val) for val in values])
